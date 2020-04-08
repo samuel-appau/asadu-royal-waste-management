@@ -12,9 +12,7 @@ export default function DashboardScreen({navigation}){
           <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
                  <MenuButton navigation={navigation} />
-                 <TouchableOpacity   onPress={()=>navigation.navigate('menu')} style={{marginTop:20,marginLeft:10,paddingTop:2}}>
-                     <Text>Menu</Text>
-                 </TouchableOpacity>
+                
           </View>
           <View style={{flex:12}}>
           <Text style={{fontWeight:'bold',fontSize:22,marginLeft:-9}}>ASADU CLIENT APP</Text>
@@ -22,11 +20,11 @@ export default function DashboardScreen({navigation}){
           <View style={{flex:3,flexDirection:'row',marginLeft:30}}>
               <Ionicons 
               name="ios-notifications-outline"
-              size={35}
+              size={28}
               style={{marginRight:-10}}/>
 
-              <View style={{backgroundColor:'red',borderRadius:40,width:15,height:15,marginLeft:2}}>
-                  <Text style={{color:'white',marginLeft:2.5,marginTop:-0.9,fontWeight:'bold'}}>0</Text>
+              <View style={{backgroundColor:'red',borderRadius:40,width:16,height:16,marginLeft:2}}>
+                  <Text style={{color:'white',marginLeft:3.3,marginTop:-0.9,fontWeight:'bold'}}>0</Text>
               </View>
 
           </View>
@@ -59,18 +57,16 @@ export default function DashboardScreen({navigation}){
                  </TouchableOpacity>
             </View>
             <View style={styles.container}>
-                    <Ionicons  name="ios-notifications-outline" size={110} color="red"/>
+                    <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
                     <TouchableOpacity >
-                     <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center'}}>VIEW NOTIFICATIONS</Text>
+                     <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
                  </TouchableOpacity>
             </View>
             </View>
-
-
             <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
             <Feather name="map-pin"  size={90} color="blue"/>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={()=>navigation.navigate('map')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>LOCATION</Text>
                  </TouchableOpacity>
             </View>
@@ -92,7 +88,7 @@ const styles=StyleSheet.create({
     container:{
         borderWidth:2,
         padding:10,
-        height:180,
+        height:170,
         width:"45%",
         borderRadius:10, 
         marginVertical:10,
@@ -111,6 +107,7 @@ const styles=StyleSheet.create({
         
         
     }
+ 
     
 
 
