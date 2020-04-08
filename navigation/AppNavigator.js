@@ -48,7 +48,7 @@ const Nav= createSwitchNavigator({
   Main:LoginScreen,
   Register:RegisterScreen,
   Dash:DashboardScreen,
-  menu:DrawerNavigator,
+  Dash:DrawerNavigator,
   camera:App,
   Forget:ForgetScreen,
   Message:MessageScreen,

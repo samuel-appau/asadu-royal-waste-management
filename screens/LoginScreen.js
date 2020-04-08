@@ -35,7 +35,7 @@ const handleLogin=(email,password,{navigation},setLoading)=>{
                                  
                                     navigation.navigate('Dash')
                                 }).catch(error=>{
-                                        setLoading(false)
+                                    setLoading(false)
                                        Alert.alert(error.message)
                                 })
                         }
