@@ -24,7 +24,7 @@ export default function DashboardScreen({navigation}){
               style={{marginRight:-10}}/>
 
               <View style={{backgroundColor:'red',borderRadius:40,width:16,height:16,marginLeft:2}}>
-                  <Text style={{color:'white',marginLeft:2.5,marginTop:-0.9,fontWeight:'bold'}}>0</Text>
+                  <Text style={{color:'white',marginLeft:3.3,marginTop:-0.9,fontWeight:'bold'}}>0</Text>
               </View>
 
           </View>
@@ -63,12 +63,10 @@ export default function DashboardScreen({navigation}){
                  </TouchableOpacity>
             </View>
             </View>
-
-
             <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
             <Feather name="map-pin"  size={90} color="blue"/>
-                <TouchableOpacity >
+                <TouchableOpacity onPress={()=>navigation.navigate('map')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>LOCATION</Text>
                  </TouchableOpacity>
             </View>
@@ -90,7 +88,7 @@ const styles=StyleSheet.create({
     container:{
         borderWidth:2,
         padding:10,
-        height:160,
+        height:170,
         width:"45%",
         borderRadius:10, 
         marginVertical:10,

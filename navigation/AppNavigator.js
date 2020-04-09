@@ -11,6 +11,9 @@ import App from '../components/camera'
 import ForgetScreen from '../screens/ForgetScreen'
 import MessageScreen from '../screens/MessageScreen'
 import MemberScreen from '../screens/MemberScreen'
+
+import Map from '../screens/Map'
+
 const WIDTH=Dimensions.get('window').width;
 
 const DrawerConfig={
@@ -52,7 +55,8 @@ const Nav= createSwitchNavigator({
   camera:App,
   Forget:ForgetScreen,
   Message:MessageScreen,
-  member:MemberScreen
+  member:MemberScreen,
+  map:Map
 }
 )
 

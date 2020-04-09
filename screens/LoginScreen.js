@@ -11,7 +11,6 @@ const handleLogin=(email,password,{navigation},setLoading)=>{
     //    const error=!valid ? [valid,message] :error
 
     // }
-
     // if(password){
     //     const valid=password.length >= 5;
     //     const message=`${!valid ? alert('Must be greater than 5 characters'):''}`;
