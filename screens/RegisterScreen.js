@@ -86,7 +86,9 @@ export default function RegisterScreen({navigation}){
                </View>
 
             </View>
-            
+            <TouchableOpacity onPress={()=>navigation.navigate('Client')}>
+                <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Go Back</Text>
+            </TouchableOpacity>
         </View>
     )
 }

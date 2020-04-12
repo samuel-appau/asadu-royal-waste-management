@@ -85,6 +85,7 @@ export default function MemberScreen({navigation}){
   const [Gender,setGender]=useState('')
   const [Address,setAddress]=useState('')
 
+  
     return(
         <View style={{flex:1,backgroundColor:"#c4ff4d"}}>
             <View style={{flexDirection:'row',borderBottomWidth:1,marginTop:29}}>

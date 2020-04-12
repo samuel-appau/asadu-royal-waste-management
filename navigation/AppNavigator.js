@@ -11,6 +11,11 @@ import App from '../components/camera'
 import ForgetScreen from '../screens/ForgetScreen'
 import MessageScreen from '../screens/MessageScreen'
 import MemberScreen from '../screens/MemberScreen'
+import AgentScreen from '../screens/AgentScreen'
+import EntryApp from '../screens/EntryApp'
+import AgentDashboard from '../screens/AgentDashboard'
+import AppAgent from '../components/camera1'
+import MapAgent from '../screens/MapAgent'
 
 import Map from '../screens/Map'
 
@@ -35,7 +40,28 @@ const DrawerNavigator=createDrawerNavigator({
         screen:RegisterScreen
   },
  Logout:{
-      screen:LoginScreen
+      screen:EntryApp
+ }
+       },
+
+  DrawerConfig
+
+
+);
+
+
+
+
+const DrawerNavigator1=createDrawerNavigator({
+
+  home:{ 
+         screen:DashboardScreen
+       },
+  Links:{
+        screen:RegisterScreen
+  },
+ Logout:{
+      screen:EntryApp
  }
        },
 
@@ -48,15 +74,24 @@ const DrawerNavigator=createDrawerNavigator({
 const Nav= createSwitchNavigator({
   // You could add another route here for authentication.
   // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-  Main:LoginScreen,
+  Main:EntryApp,
+  AgentDash:AgentDashboard,
+  menu:DrawerNavigator1,
+  Client:LoginScreen,
   Register:RegisterScreen,
   Dash:DashboardScreen,
   Dash:DrawerNavigator,
   camera:App,
+  camera1:AppAgent,
   Forget:ForgetScreen,
   Message:MessageScreen,
   member:MemberScreen,
-  map:Map
+  map:Map,
+  Agent:AgentScreen,
+  GoBack:LoginScreen,
+ 
+  map1:MapAgent
+
 }
 )
 
