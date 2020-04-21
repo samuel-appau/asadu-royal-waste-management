@@ -15,8 +15,8 @@ import AgentScreen from '../screens/AgentScreen'
 import EntryApp from '../screens/EntryApp'
 import AgentDashboard from '../screens/AgentDashboard'
 import AppAgent from '../components/camera1'
-import MapAgent from '../screens/MapAgent'
-
+import MapAgent from '../screens/MapAgent' 
+import PaymentScreen from '../screens/PaymentScreen'
 import Map from '../screens/Map'
 
 const WIDTH=Dimensions.get('window').width;
@@ -57,7 +57,7 @@ const DrawerNavigator1=createDrawerNavigator({
   home:{ 
          screen:DashboardScreen
        },
-  Links:{
+  Profile:{
         screen:RegisterScreen
   },
  Logout:{
@@ -76,7 +76,7 @@ const Nav= createSwitchNavigator({
   // Read more at https://reactnavigation.org/docs/en/auth-flow.html
   Main:EntryApp,
   AgentDash:AgentDashboard,
-  menu:DrawerNavigator1,
+
   Client:LoginScreen,
   Register:RegisterScreen,
   Dash:DashboardScreen,
@@ -89,7 +89,7 @@ const Nav= createSwitchNavigator({
   map:Map,
   Agent:AgentScreen,
   GoBack:LoginScreen,
- 
+
   map1:MapAgent
 
 }

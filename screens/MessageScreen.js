@@ -129,7 +129,7 @@ const MessageScreen= ({navigation}) => {
   return (
     <View  style={{flex:1}}>
       <View style={{borderBottomWidth:1,borderBottomColor:'ash',marginTop:40,flexDirection:'row'}}>
-        <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Dash')} style={{marginTop:-9,marginBottom:8}}/>
+        <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('AgentDash')} style={{marginTop:-9,marginBottom:8}}/>
       </View>
     <SafeAreaView style={styles.containerStyle}>
       <RNDraftView

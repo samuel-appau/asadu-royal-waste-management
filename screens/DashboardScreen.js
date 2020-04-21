@@ -34,16 +34,17 @@ export default function DashboardScreen({navigation}){
             
            <View style={{flexDirection:'row'}}>
                
-            <View style={styles.container} >
-                  <FontAwesome name="qrcode" size={110}  color='gold'  />
-                 <TouchableOpacity onPress={()=>navigation.navigate('camera')}>
-                     <Text style={{fontWeight:'bold',fontSize:12}}>QR-CODE SCANNER</Text>
+             
+           <View style={styles.container}>
+            <Feather name="user"  size={90} color="gold" onPress={()=>navigation.navigate('member')}/>
+                <TouchableOpacity onPress={()=>navigation.navigate('member')} >
+                     <Text style={{fontWeight:'bold',fontSize:12}}>MEMBER</Text>
                  </TouchableOpacity>
             </View>
         
                 <View style={styles.container}>
                   <FontAwesome name="money" size={122} color='black' style={{marginTop:-12}}  />
-                  <TouchableOpacity >
+                  <TouchableOpacity onPress={()=>navigation.navigate('Payment')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>MAKE-PAYMENT</Text>
                  </TouchableOpacity>
             </View>
@@ -51,7 +52,7 @@ export default function DashboardScreen({navigation}){
 
             <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
-                <Feather name="message-square"  size={110} color="green"/>
+                <Feather name="message-square"  size={110} color="green" onPress={()=>navigation.navigate('Message')}/>
                 <TouchableOpacity  onPress={()=>navigation.navigate('Message')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>SEND MESSAGE</Text>
                  </TouchableOpacity>
@@ -60,20 +61,6 @@ export default function DashboardScreen({navigation}){
                     <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
                     <TouchableOpacity >
                      <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
-                 </TouchableOpacity>
-            </View>
-            </View>
-            <View style={{flexDirection:'row'}}>
-            <View style={styles.container}>
-            <Feather name="map-pin"  size={90} color="blue"/>
-                <TouchableOpacity onPress={()=>navigation.navigate('map')}>
-                     <Text style={{fontWeight:'bold',fontSize:12}}>LOCATION</Text>
-                 </TouchableOpacity>
-            </View>
-            <View style={styles.container}>
-            <Feather name="user"  size={90} color="black"/>
-                <TouchableOpacity onPress={()=>navigation.navigate('member')} >
-                     <Text style={{fontWeight:'bold',fontSize:12}}>MEMBER</Text>
                  </TouchableOpacity>
             </View>
             </View>
@@ -88,7 +75,7 @@ const styles=StyleSheet.create({
     container:{
         borderWidth:2,
         padding:10,
-        height:170,
+        height:185,
         width:"45%",
         borderRadius:10, 
         marginVertical:10,
@@ -101,9 +88,9 @@ const styles=StyleSheet.create({
         backgroundColor:'white',
         padding:20,
         borderRadius:10,
-        marginRight:12,
-        marginLeft:10,
-        marginTop:20
+        marginRight:15,
+        marginLeft:8,
+        marginTop:50
         
         
     }
@@ -112,3 +99,4 @@ const styles=StyleSheet.create({
 
 
 });
+

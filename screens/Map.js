@@ -7,7 +7,7 @@ export default function Map({navigation}){
     return (
       <View style={styles.container}>
       <View style={{flexDirection:'row',borderBottomWidth:1,marginTop:90}}>
-                <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Dash')} style={{marginTop:-9,marginBottom:8,marginLeft:-60,marginRight:20}}/>
+                <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('AgentDash')} style={{marginTop:-9,marginBottom:8,marginLeft:-60,marginRight:20}}/>
                 <Text style={{marginLeft:20,fontWeight:'bold',fontSize:20,marginTop:-6}}>ASADU ROYAL WASTE</Text>
             </View>
             <MapView

@@ -37,8 +37,7 @@ const handleSignUp=(email,password,{navigation},setLoading)=>{
                          dataToSubmit.email,
                          dataToSubmit.password
                                 ).then(()=>{
-
-                                    navigation.navigate('Main')
+                                    navigation.navigate('Client')
                                 }).catch(error=>{
                                    setLoading(false)
                                    Alert.alert(error.message)

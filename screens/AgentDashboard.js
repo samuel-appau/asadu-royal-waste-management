@@ -11,10 +11,7 @@ export default function AgentDashboard({navigation}){
         
           <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
-                 <MenuButton navigation={navigation} />
-                 <TouchableOpacity onPress={()=>navigation.navigate('menu')}>
-                     <Text>Menu </Text>
-                 </TouchableOpacity>
+          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Agent')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
                 
           </View>
           <View style={{flex:12}}>
@@ -46,16 +43,16 @@ export default function AgentDashboard({navigation}){
             </View>
         
                 <View style={styles.container}>
-                  <FontAwesome name="money" size={142} color='black' style={{marginTop:-12}}  />
-                  <TouchableOpacity >
-                     <Text style={{fontWeight:'bold',fontSize:12}}>MAKE-PAYMENT</Text>
+                  <FontAwesome name="money" size={128} color='black' style={{marginTop:-12}} onPress={()=>navigation.navigate('Payment')} />
+                  <TouchableOpacity onPress={()=>navigation.navigate('Payment')}>
+                     <Text style={{fontWeight:'bold',fontSize:12}} >MAKE-PAYMENT</Text>
                  </TouchableOpacity>
             </View>
             </View>
 
             <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
-                <Feather name="message-square"  size={120} color="green"/>
+                <Feather name="message-square"  size={120} color="green"  onPress={()=>navigation.navigate('Message')}/>
                 <TouchableOpacity  onPress={()=>navigation.navigate('Message')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>SEND MESSAGE</Text>
                  </TouchableOpacity>
@@ -63,11 +60,30 @@ export default function AgentDashboard({navigation}){
 
 
             <View style={styles.container}>
-            <Feather name="map-pin"  size={110} color="blue"/>
+            <Feather name="map-pin"  size={110} color="blue" onPress={()=>navigation.navigate('map1')}/>
                 <TouchableOpacity onPress={()=>navigation.navigate('map1')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>LOCATION</Text>
                  </TouchableOpacity>
+
+                 
            
+            </View>
+            </View>
+
+
+
+            <View style={{flexDirection:'row'}}>
+            <View style={styles.container}>
+                    <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
+                    <TouchableOpacity >
+                     <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
+                 </TouchableOpacity>
+            </View>
+            <View style={styles.container}>
+            <Feather name="user"  size={90} color="black" onPress={()=>navigation.navigate('member')} />
+                <TouchableOpacity onPress={()=>navigation.navigate('member')} >
+                     <Text style={{fontWeight:'bold',fontSize:12}}>MEMBER</Text>
+                 </TouchableOpacity>
             </View>
             </View>
             </ScrollView>
@@ -81,8 +97,8 @@ const styles=StyleSheet.create({
     container:{
         borderWidth:2,
         padding:10,
-        height:200,
-        width:"48%",
+        height:180,
+        width:"45%",
         borderRadius:10, 
         marginVertical:10,
         alignItems:'center',
@@ -94,9 +110,9 @@ const styles=StyleSheet.create({
         backgroundColor:'white',
         padding:20,
         borderRadius:10,
-        marginRight:2,
-        marginLeft:5,
-        marginTop:40
+        marginRight:10,
+        marginLeft:8,
+        marginTop:20
         
         
     }
@@ -105,3 +121,7 @@ const styles=StyleSheet.create({
 
 
 });
+
+
+
+

@@ -80,7 +80,7 @@ export default function AgentScreen({navigation}){
     return(
         <View style={{flex:1,marginTop:-10}}>
         <Text style={{marginTop:40,fontWeight:'bold',fontSize:20,marginLeft:35}}>ASADU AGENT LOGIN-PAGE</Text>
-            <View  style={{borderRadius:10,marginTop:60,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
+            <View  style={{borderRadius:10,marginTop:60,backgroundColor:"#c0e81e",width:"95%",marginLeft:8,height:"62%"}}>
             
             <Image  source={require('../assets/images/1.jpg')} style={{borderRadius:50,height:100,width:100,marginTop:-50,marginLeft:130,borderColor:'green',borderWidth:1}}/>
             <View style={{flexDirection:'row',marginTop:17}}>
