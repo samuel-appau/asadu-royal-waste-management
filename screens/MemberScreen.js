@@ -85,10 +85,11 @@ export default function MemberScreen({navigation}){
   const [Gender,setGender]=useState('')
   const [Address,setAddress]=useState('')
 
+  
     return(
         <View style={{flex:1,backgroundColor:"#c4ff4d"}}>
             <View style={{flexDirection:'row',borderBottomWidth:1,marginTop:29}}>
-                <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Dash')} style={{marginTop:-9,marginBottom:8}}/>
+                <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('AgentDash')} style={{marginTop:-9,marginBottom:8}}/>
                 <Text style={{marginLeft:20,fontWeight:'bold',fontSize:20,marginTop:-6}}>ASADU ROYAL WASTE</Text>
             </View>
 

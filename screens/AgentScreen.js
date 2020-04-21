@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {Text,View,StyleSheet,ActivityIndicator,TextInput,Button,Switch,TouchableOpacity,Alert,Image}  from 'react-native'
 import {firebase,firebaseDB} from '../firebase'
-import RNPickerSelect from 'react-native-picker-select';
+
 
 
 const handleLogin=(email,password,{navigation},setLoading)=>{
@@ -34,7 +34,7 @@ const handleLogin=(email,password,{navigation},setLoading)=>{
                          dataToSubmit.password
                                 ).then(()=>{
                                  
-                                    navigation.navigate('Dash')
+                                    navigation.navigate('AgentDash')
                                 }).catch(error=>{
                                     setLoading(false)
                                        Alert.alert(error.message)
@@ -59,7 +59,7 @@ const handleLogin=(email,password,{navigation},setLoading)=>{
                                                    dataToSubmit.email,
                                                    dataToSubmit.password
                                                           ).then(()=>{
-                                                              navigation.navigate('Dash')
+                                                              navigation.navigate('AgentDash')
                                                           }).catch(error=>{
                                                                 
                                                                  Alert.alert(error.message)
@@ -68,49 +68,28 @@ const handleLogin=(email,password,{navigation},setLoading)=>{
                             }
                          
 
-export default function LoginScreen({navigation}){
+export default function AgentScreen({navigation}){
 
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const [Loading,setLoading]=useState(false)
     const [rememberMe,setRememberMe]=useState('')
-    const [userType,setUserType]=useState('')
+    
 
 
     return(
         <View style={{flex:1,marginTop:-10}}>
-        <Text style={{marginTop:40,fontWeight:'bold',fontSize:20,marginLeft:35}}>ASADU CLIENT LOGIN-PAGE</Text>
-            <View  style={{borderRadius:10,marginTop:80,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
+        <Text style={{marginTop:40,fontWeight:'bold',fontSize:20,marginLeft:35}}>ASADU AGENT LOGIN-PAGE</Text>
+            <View  style={{borderRadius:10,marginTop:60,backgroundColor:"#c0e81e",width:"95%",marginLeft:8,height:"62%"}}>
             
             <Image  source={require('../assets/images/1.jpg')} style={{borderRadius:50,height:100,width:100,marginTop:-50,marginLeft:130,borderColor:'green',borderWidth:1}}/>
-            {/* <View style={{flexDirection:'row',marginTop:17}}>
-            <Text style={{color:'white',marginLeft:20,fontWeight:'bold',fontSize:14,marginRight:40}}>
-             User Type 
-            </Text>
-            <RNPickerSelect
-            items={[
-                { label: 'Client', value: 'Client' },
-                { label: 'Agent', value: 'Agent' },
-                
-            ]}
-        
-            onValueChange={(value) => console.log(value)}
-            
-            onDonePress={(value)=>
-                navigation.navigate('Agent')
-            
-            }
-            
-            
-
-                /> */}
-            {/* </View> */}
-                <View style={{marginTop:30}}>  
+            <View style={{flexDirection:'row',marginTop:17}}>
+            </View>
+                <View style={{marginTop:29}}>  
                <TextInput 
                placeholder="Username"
                value={email}
                onChangeText={email=>setEmail({email})}
-               
                
                style={{marginTop:10,marginBottom:20,backgroundColor:'white',height:40,width:"90%",marginBottom:-60,marginLeft:15,borderRadius:6}}
                />
@@ -149,9 +128,9 @@ export default function LoginScreen({navigation}){
                </View>
 
             </View>
-            <Text style={{marginLeft:100,marginTop:7}}>Not registered with ASADU?</Text>
-            <TouchableOpacity onPress={()=>navigation.navigate('Register')}>
-                <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Register now</Text>
+           
+            <TouchableOpacity onPress={()=>navigation.navigate('Main')}>
+                <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Go Back</Text>
             </TouchableOpacity>
         </View>
     )

@@ -1,22 +1,23 @@
 import React from 'react'
 import {View,Text,StyleSheet,ScrollView,TouchableOpacity} from 'react-native'
 import MenuButton from '../components/Menubar';
-import {Ionicons,FontAwesome,Feather} from '@expo/vector-icons'
+import {Ionicons,FontAwesome,Feather,AntDesign} from '@expo/vector-icons'
 
 
 
-export default function DashboardScreen({navigation}){
+export default function AgentDashboard({navigation}){
     return(
         <View style={{flex:1}}>
         
           <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
-                 <MenuButton navigation={navigation} />
+          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Agent')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
                 
           </View>
           <View style={{flex:12}}>
-          <Text style={{fontWeight:'bold',fontSize:22,marginLeft:-9}}>ASADU CLIENT APP</Text>
+          <Text style={{fontWeight:'bold',fontSize:22,marginLeft:-9}}>ASADU MOBILE APP</Text>
           </View>
+
           <View style={{flex:3,flexDirection:'row',marginLeft:30}}>
               <Ionicons 
               name="ios-notifications-outline"
@@ -32,35 +33,56 @@ export default function DashboardScreen({navigation}){
             
             <ScrollView>
             
-           <View style={{flexDirection:'row'}}>
+           <View style={{flexDirection:'row',marginTop:10}}>
                
-             
-           <View style={styles.container}>
-            <Feather name="user"  size={90} color="gold" onPress={()=>navigation.navigate('member')}/>
-                <TouchableOpacity onPress={()=>navigation.navigate('member')} >
-                     <Text style={{fontWeight:'bold',fontSize:12}}>MEMBER</Text>
+            <View style={styles.container} >
+                  <AntDesign name="scan1" size={120}  color='gold'  onPress={()=>navigation.navigate('camera1')} />
+                 <TouchableOpacity onPress={()=>navigation.navigate('camera1')}>
+                     <Text style={{fontWeight:'bold',fontSize:12}}>QR-CODE SCANNER</Text>
                  </TouchableOpacity>
             </View>
         
                 <View style={styles.container}>
-                  <FontAwesome name="money" size={122} color='black' style={{marginTop:-12}}  />
+                  <FontAwesome name="money" size={128} color='black' style={{marginTop:-12}} onPress={()=>navigation.navigate('Payment')} />
                   <TouchableOpacity onPress={()=>navigation.navigate('Payment')}>
-                     <Text style={{fontWeight:'bold',fontSize:12}}>MAKE-PAYMENT</Text>
+                     <Text style={{fontWeight:'bold',fontSize:12}} >MAKE-PAYMENT</Text>
                  </TouchableOpacity>
             </View>
             </View>
 
             <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
-                <Feather name="message-square"  size={110} color="green" onPress={()=>navigation.navigate('Message')}/>
+                <Feather name="message-square"  size={120} color="green"  onPress={()=>navigation.navigate('Message')}/>
                 <TouchableOpacity  onPress={()=>navigation.navigate('Message')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>SEND MESSAGE</Text>
                  </TouchableOpacity>
             </View>
+
+
+            <View style={styles.container}>
+            <Feather name="map-pin"  size={110} color="blue" onPress={()=>navigation.navigate('map1')}/>
+                <TouchableOpacity onPress={()=>navigation.navigate('map1')}>
+                     <Text style={{fontWeight:'bold',fontSize:12}}>LOCATION</Text>
+                 </TouchableOpacity>
+
+                 
+           
+            </View>
+            </View>
+
+
+
+            <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
                     <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
                     <TouchableOpacity >
                      <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
+                 </TouchableOpacity>
+            </View>
+            <View style={styles.container}>
+            <Feather name="user"  size={90} color="black" onPress={()=>navigation.navigate('member')} />
+                <TouchableOpacity onPress={()=>navigation.navigate('member')} >
+                     <Text style={{fontWeight:'bold',fontSize:12}}>MEMBER</Text>
                  </TouchableOpacity>
             </View>
             </View>
@@ -75,7 +97,7 @@ const styles=StyleSheet.create({
     container:{
         borderWidth:2,
         padding:10,
-        height:185,
+        height:180,
         width:"45%",
         borderRadius:10, 
         marginVertical:10,
@@ -88,9 +110,9 @@ const styles=StyleSheet.create({
         backgroundColor:'white',
         padding:20,
         borderRadius:10,
-        marginRight:15,
+        marginRight:10,
         marginLeft:8,
-        marginTop:50
+        marginTop:20
         
         
     }
@@ -99,4 +121,7 @@ const styles=StyleSheet.create({
 
 
 });
+
+
+
 

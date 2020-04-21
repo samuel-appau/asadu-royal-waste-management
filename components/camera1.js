@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Button } from 'react-native';
 import {Ionicons,FontAwesome,Feather} from '@expo/vector-icons'
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-export default function App({navigation}) {
+export default function AppAgent({navigation}) {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
 
@@ -41,7 +41,7 @@ export default function App({navigation}) {
       
 
       <View style={{flexDirection:'row',flex:4}}>
-         <Feather name="arrow-left" color='white' size={29} onPress={()=>navigation.navigate('Dash')} style={{marginBottom:8,marginTop:10}}/>
+         <Feather name="arrow-left" color='white' size={29} onPress={()=>navigation.navigate('AgentDash')} style={{marginBottom:8,marginTop:10}}/>
       </View>
 
       {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}

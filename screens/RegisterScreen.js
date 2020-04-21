@@ -37,8 +37,7 @@ const handleSignUp=(email,password,{navigation},setLoading)=>{
                          dataToSubmit.email,
                          dataToSubmit.password
                                 ).then(()=>{
-
-                                    navigation.navigate('Main')
+                                    navigation.navigate('Client')
                                 }).catch(error=>{
                                    setLoading(false)
                                    Alert.alert(error.message)
@@ -86,7 +85,9 @@ export default function RegisterScreen({navigation}){
                </View>
 
             </View>
-            
+            <TouchableOpacity onPress={()=>navigation.navigate('Client')}>
+                <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Go Back</Text>
+            </TouchableOpacity>
         </View>
     )
 }

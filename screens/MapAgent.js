@@ -3,7 +3,7 @@ import MapView,{ PROVIDER_GOOGLE } from 'react-native-maps';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import {Feather} from '@expo/vector-icons'
 
-export default function Map({navigation}){
+export default function MapAgent({navigation}){
     return (
       <View style={styles.container}>
       <View style={{flexDirection:'row',borderBottomWidth:1,marginTop:90}}>
