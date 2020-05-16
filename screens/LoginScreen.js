@@ -79,10 +79,11 @@ export default function LoginScreen({navigation}){
 
     return(
         <View style={{flex:1,marginTop:-10}}>
-        <Text style={{marginTop:40,fontWeight:'bold',fontSize:20,marginLeft:35}}>ASADU CLIENT LOGIN-PAGE</Text>
-            <View  style={{borderRadius:10,marginTop:80,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
+       
+        <Image  source={require('../assets/images/1.jpg')} style={{height:150,width:'100%',marginTop:40}}/>
+            <View  style={{borderRadius:10,marginTop:-7,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
             
-            <Image  source={require('../assets/images/1.jpg')} style={{borderRadius:50,height:100,width:100,marginTop:-50,marginLeft:130,borderColor:'green',borderWidth:1}}/>
+          
             {/* <View style={{flexDirection:'row',marginTop:17}}>
             <Text style={{color:'white',marginLeft:20,fontWeight:'bold',fontSize:14,marginRight:40}}>
              User Type 
@@ -105,14 +106,14 @@ export default function LoginScreen({navigation}){
 
                 /> */}
             {/* </View> */}
-                <View style={{marginTop:30}}>  
+                <View style={{marginTop:50}}>  
                <TextInput 
                placeholder="Username"
                value={email}
                onChangeText={email=>setEmail({email})}
                
                
-               style={{marginTop:10,marginBottom:20,backgroundColor:'white',height:40,width:"90%",marginBottom:-60,marginLeft:15,borderRadius:6}}
+               style={{marginTop:10,marginBottom:20,backgroundColor:'white',height:45,width:"90%",marginBottom:-60,marginLeft:15,borderRadius:6}}
                />
                <TextInput
                autoCorrect={false}
@@ -120,7 +121,7 @@ export default function LoginScreen({navigation}){
                placeholder="Password"
                value={password}
                onChangeText={password=>setPassword({password})}
-               style={{marginTop:100,backgroundColor:'white',height:40,marginBottom:-50,width:"90%",marginLeft:15,borderRadius:6}}
+               style={{marginTop:100,backgroundColor:'white',height:45,marginBottom:-50,width:"90%",marginLeft:15,borderRadius:6}}
                />
 
 
@@ -135,7 +136,7 @@ export default function LoginScreen({navigation}){
                 </TouchableOpacity>
                 </View>
 
-               <View  style={{backgroundColor:"green",marginTop:27,height:40,width:"90%",marginLeft:15,borderRadius:7}}>
+               <View  style={{backgroundColor:"green",marginTop:45,height:45,width:"90%",marginLeft:15,borderRadius:7}}>
                    <Button  color="white"  title="Login"   onPress={()=>handleLogin(email,password,{navigation},setLoading)}/>
                </View>
                  
@@ -164,7 +165,7 @@ const styles=StyleSheet.create({
         position: 'absolute',
         left: 0,
         right: 0,
-        top: 210,
+        top: 230,
         bottom: 0,
         alignItems: 'center',
         justifyContent: 'center'

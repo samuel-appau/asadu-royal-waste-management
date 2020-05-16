@@ -27,7 +27,7 @@ export default function EntryApp({navigation}){
             
 
             <Text style={{marginTop:-540,fontWeight:'bold',fontSize:29,marginLeft:20,color:'white'}}>ASADU  ROYAL  WASTE</Text>
-            <Image  source={require('../assets/images/1.jpg')}  style={{borderRadius:50,height:100,width:100,marginLeft:140}}/>
+            
             
             </View>
     
