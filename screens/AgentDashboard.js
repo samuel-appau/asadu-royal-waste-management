@@ -11,7 +11,7 @@ export default function AgentDashboard({navigation}){
         
           <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
-          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Agent')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
+              <MenuButton navigation={navigation} />
                 
           </View>
           <View style={{flex:12}}>

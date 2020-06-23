@@ -8,6 +8,7 @@ import MainTabNavigator from './MainTabNavigator';
 import DashboardScreen from '../screens/DashboardScreen'
 import MenuDrawer from '../components/MenuDrawer'
 import App from '../components/camera'
+import AgentMemberScreen from '../screens/AgentMember'
 import ForgetScreen from '../screens/ForgetScreen'
 import MessageScreen from '../screens/MessageScreen'
 import MemberScreen from '../screens/MemberScreen'
@@ -16,8 +17,8 @@ import EntryApp from '../screens/EntryApp'
 import AgentDashboard from '../screens/AgentDashboard'
 import AppAgent from '../components/camera1'
 import MapAgent from '../screens/MapAgent' 
-import PaymentScreen from '../screens/PaymentScreen'
-import Map from '../screens/Map'
+import PaymentScreen from '../screens/Payment'
+import Mapp from '../screens/Map'
 
 const WIDTH=Dimensions.get('window').width;
 
@@ -36,7 +37,7 @@ const DrawerNavigator=createDrawerNavigator({
   home:{ 
          screen:DashboardScreen
        },
-  Links:{
+  Waste:{
         screen:RegisterScreen
   },
  Logout:{
@@ -55,9 +56,9 @@ const DrawerNavigator=createDrawerNavigator({
 const DrawerNavigator1=createDrawerNavigator({
 
   home:{ 
-         screen:DashboardScreen
+         screen:AgentDashboard
        },
-  Profile:{
+  Waste:{
         screen:RegisterScreen
   },
  Logout:{
@@ -75,8 +76,7 @@ const Nav= createSwitchNavigator({
   // You could add another route here for authentication.
   // Read more at https://reactnavigation.org/docs/en/auth-flow.html
   Main:EntryApp,
-  AgentDash:AgentDashboard,
-
+  AgentDash:DrawerNavigator1,
   Client:LoginScreen,
   Register:RegisterScreen,
   Dash:DashboardScreen,
@@ -86,10 +86,11 @@ const Nav= createSwitchNavigator({
   Forget:ForgetScreen,
   Message:MessageScreen,
   member:MemberScreen,
-  map:Map,
+  member1:AgentMemberScreen,
+  map:Mapp,
   Agent:AgentScreen,
   GoBack:LoginScreen,
-
+  Payment:PaymentScreen,
   map1:MapAgent
 
 }

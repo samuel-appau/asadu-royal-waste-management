@@ -75,7 +75,7 @@ const handleSubmit=(setLoading,name,email,Location,Tel,image,Address)=>{
 
 
 
-export default function MemberScreen({navigation}){
+export default function AgentMemberScreen({navigation}){
   const [image,setImage]=useState(null);
   const [Loading,setLoading]=useState(false)
   const [name,setName]=useState('')
