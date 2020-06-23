@@ -5,20 +5,6 @@ import {firebase,firebaseDB} from '../firebase'
 
 
 const handleLogin=(email,password,{navigation},setLoading)=>{
-
-
-    // if(email){
-    //     const valid=/\S+@\S+\.\S+/.test(email);
-    //     const message=`${!valid ? alert('Must be a valid email'):''}`;
-    //    const error=!valid ? [valid,message] :error
-
-    // }
-    // if(password){
-    //     const valid=password.length >= 5;
-    //     const message=`${!valid ? alert('Must be greater than 5 characters'):''}`;
-    //     const error=!valid ? [valid,message] :error
-
-    // }
       let dataToSubmit={};
       for(let key in email){
         dataToSubmit[key]=email[key]
@@ -81,13 +67,9 @@ if(Platform.OS==='android'){
 
 
         <View style={{flex:1,marginTop:-10}}>
-        <Image  source={require('../assets/images/1.jpg')} style={{height:150,width:'100%',marginTop:40}}/> 
-            <View  style={{borderRadius:10,marginTop:-20,backgroundColor:"#c0e81e",width:"95%",marginLeft:8,height:"62%"}}>
-            
-           
-            <View style={{flexDirection:'row',marginTop:17}}>
-            </View>
-                <View style={{marginTop:29}}>  
+        <Image  source={require('../assets/images/1.jpg')} style={{height:170,width:'100%',marginTop:40}}/> 
+            <View  style={{borderRadius:10,marginTop:-20,backgroundColor:"#c0e81e",width:"95%",marginLeft:8,height:"60%"}}>
+                <View style={{marginTop:33}}>  
                <TextInput 
                placeholder="Username"
                value={email}
@@ -135,6 +117,7 @@ if(Platform.OS==='android'){
                 <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Go Back</Text>
             </TouchableOpacity>
         </View>
+        
     )
 }
 
@@ -146,10 +129,7 @@ return(
     <View style={{flex:1,marginTop:-10}}>
     <Image  source={require('../assets/images/1.jpg')} style={{height:150,width:'100%',marginTop:40}}/> 
         <View  style={{borderRadius:10,marginTop:-20,backgroundColor:"#c0e81e",width:"95%",marginLeft:8,height:"62%"}}>
-        
-       
-        <View style={{flexDirection:'row',marginTop:17}}>
-        </View>
+    
             <View style={{marginTop:29}}>  
            <TextInput 
            placeholder="Username"

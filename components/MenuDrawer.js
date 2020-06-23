@@ -25,7 +25,7 @@ render(){
         </View>
         <View  style={styles.BottomLink}>
         {this.navLink('home','home')}
-        {this.navLink('Waste','Waste')}
+        {this.navLink('Message','Message')}
         {this.navLink('Logout','Logout')}
         
         </View>

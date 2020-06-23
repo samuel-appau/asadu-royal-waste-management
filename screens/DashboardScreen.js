@@ -58,8 +58,8 @@ export default function DashboardScreen({navigation}){
                  </TouchableOpacity>
             </View>
             <View style={styles.container}>
-                    <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
-                    <TouchableOpacity >
+                    <Ionicons  name="ios-notifications-outline" size={110} color="red" onPress={()=>navigation.navigate('notification')}style={{marginTop:-12}}/>
+                    <TouchableOpacity onPress={()=>navigation.navigate('notification')}>
                      <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
                  </TouchableOpacity>
             </View>

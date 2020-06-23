@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import {View,Text,StyleSheet,TextInput,Picker,Button,Platform} from 'react-native'
-import {Ionicons} from '@expo/vector-icons'
-import {firebase} from '../firebase'
+import {View,Text,StyleSheet,TextInput,Picker,Button,Platform,Alert} from 'react-native'
+import {Ionicons,Feather} from '@expo/vector-icons'
+import {firebase,firebaseDB} from '../firebase'
 
 
 const handlePayment=(name,phone,search,amount)=>{
@@ -46,7 +46,7 @@ if(Platform.OS==='android'){
       <View style={{flex:1}}>
          <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
-          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Agent')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
+          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Dash')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
                 
           </View>
           <View style={{flex:12}}>
@@ -62,7 +62,7 @@ if(Platform.OS==='android'){
          placeholder='Enter your name'
          value={name}
          onChangeText={name=>setName({name})}
-         style={{backgroundColor:'white',height:40,width:"80%",borderRadius:2,borderColor:'#12e607'}}
+         style={{backgroundColor:'white',height:40,width:"80%",borderRadius:2,borderColor:'green'}}
          />
          </View>
          
@@ -86,7 +86,7 @@ if(Platform.OS==='android'){
       </View>
 
 
-      <View style={{margin: 10}}>
+      <View style={{margin: 10,marginTop:33}}>
 
     <Picker
 
@@ -156,7 +156,7 @@ height: 2,
          </View>
 
    
-              <Button color='blue' title="Proceed" onPress={()=>handlePayment(name,phone,search,amount)} style={{width:'75%',width:'90%',height:47,marginTop:60}}/>
+              <Button color='blue' title="Proceed" onPress={()=>handlePayment(name,phone,search,amount)} style={{width:'75%',width:'98%',height:47,marginTop:60}}/>
          
   </View>
     )
@@ -167,7 +167,7 @@ return(
     
     <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
-          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Agent')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
+          <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Dash')} style={{marginTop:-4,marginBottom:8,marginLeft:5}}/>
                 
           </View>
           <View style={{flex:12}}>
@@ -207,7 +207,7 @@ return(
   </View>
 
 
-  <View style={{margin: 10}}>
+  <View style={{margin: 10,marginTop:29}}>
 
 <Picker
 
@@ -279,9 +279,9 @@ height: 2,
 
 
 
-      <View style={{backgroundColor:'green',width:'90%',height:47,marginTop:50}}>
+      <View style={{backgroundColor:'green',width:'99%',height:47,marginTop:50}}>
   
-          <Button color='blue' title="Proceed"  onPress={()=>handlePayment(name,phone,search,amount)} style={{width:'75%',marginTop:15}}/>
+          <Button color='blue' title="Proceed"  onPress={()=>handlePayment(name,phone,search,amount)} style={{width:'95%',marginTop:15}}/>
       </View>
 </View>
 

@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {firebaseDB} from '../firebase'
 import {View,Text,Button,StyleSheet,FlatList} from 'react-native'
+import {Feather} from '@expo/vector-icons'
 
 export default class NotificationScreen extends Component{
   state={
@@ -25,7 +26,11 @@ export default class NotificationScreen extends Component{
 
   render(){
     return(
-      <View>
+      <View style={{flex:1}}>
+        <View style={{flexDirection:'row',borderBottomWidth:1,marginTop:30}}>
+                <Feather name="arrow-left" size={29} onPress={()=>this.props.navigation.navigate('Dash')} style={{marginTop:-9,marginBottom:8,marginRight:20}}/>
+                <Text style={{marginLeft:20,fontWeight:'bold',fontSize:20,marginTop:-6}}>ASADU ROYAL WASTE</Text>
+            </View>
         <FlatList
           data={this.state.students}
           numColumns="2"

@@ -6,6 +6,7 @@ import LoginScreen from '../screens/LoginScreen'
 import RegisterScreen from '../screens/RegisterScreen'
 import MainTabNavigator from './MainTabNavigator';
 import DashboardScreen from '../screens/DashboardScreen'
+import NotificationScreen from '../screens/NotificationScreen'
 import MenuDrawer from '../components/MenuDrawer'
 import App from '../components/camera'
 import AgentMemberScreen from '../screens/AgentMember'
@@ -37,8 +38,8 @@ const DrawerNavigator=createDrawerNavigator({
   home:{ 
          screen:DashboardScreen
        },
-  Waste:{
-        screen:RegisterScreen
+  Message:{
+        screen:NotificationScreen
   },
  Logout:{
       screen:EntryApp
@@ -59,7 +60,7 @@ const DrawerNavigator1=createDrawerNavigator({
          screen:AgentDashboard
        },
   Waste:{
-        screen:RegisterScreen
+        screen:NotificationScreen
   },
  Logout:{
       screen:EntryApp
@@ -91,7 +92,8 @@ const Nav= createSwitchNavigator({
   Agent:AgentScreen,
   GoBack:LoginScreen,
   Payment:PaymentScreen,
-  map1:MapAgent
+  map1:MapAgent,
+  notification:NotificationScreen
 
 }
 )

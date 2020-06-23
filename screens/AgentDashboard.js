@@ -74,14 +74,14 @@ export default function AgentDashboard({navigation}){
 
             <View style={{flexDirection:'row'}}>
             <View style={styles.container}>
-                    <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
-                    <TouchableOpacity >
+                    <Ionicons  name="ios-notifications-outline" size={110} color="red"  onPress={()=>navigation.navigate('notification')} style={{marginTop:-12}}/>
+                    <TouchableOpacity  onPress={()=>navigation.navigate('notification')} >
                      <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
                  </TouchableOpacity>
             </View>
             <View style={styles.container}>
-            <Feather name="user"  size={90} color="black" onPress={()=>navigation.navigate('member')} />
-                <TouchableOpacity onPress={()=>navigation.navigate('member')} >
+            <Feather name="user"  size={90} color="black" onPress={()=>navigation.navigate('member1')} />
+                <TouchableOpacity onPress={()=>navigation.navigate('member1')} >
                      <Text style={{fontWeight:'bold',fontSize:12}}>MEMBER</Text>
                  </TouchableOpacity>
             </View>
