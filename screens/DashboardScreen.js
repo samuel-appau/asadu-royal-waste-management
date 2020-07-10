@@ -11,7 +11,7 @@ export default function DashboardScreen({navigation}){
         
           <View   style={{flexDirection:"row",borderBottomColor:"ash",borderBottomWidth:1,marginTop:35,backgroundColor:"ash"}}>
           <View style={{flex:4}}>
-                 <MenuButton navigation={navigation} />
+          <MenuButton navigation={navigation} />
                 
           </View>
           <View style={{flex:12}}>
@@ -43,7 +43,7 @@ export default function DashboardScreen({navigation}){
             </View>
         
                 <View style={styles.container}>
-                  <FontAwesome name="money" size={122} color='black' style={{marginTop:-12}}  />
+                  <FontAwesome name="money" size={122} color='black' style={{marginTop:-12}} onPress={()=>navigation.navigate('Payment')} />
                   <TouchableOpacity onPress={()=>navigation.navigate('Payment')}>
                      <Text style={{fontWeight:'bold',fontSize:12}}>MAKE-PAYMENT</Text>
                  </TouchableOpacity>
@@ -58,8 +58,8 @@ export default function DashboardScreen({navigation}){
                  </TouchableOpacity>
             </View>
             <View style={styles.container}>
-                    <Ionicons  name="ios-notifications-outline" size={110} color="red" style={{marginTop:-12}}/>
-                    <TouchableOpacity >
+                    <Ionicons  name="ios-notifications-outline" size={110} color="red" onPress={()=>navigation.navigate('notification')}style={{marginTop:-12}}/>
+                    <TouchableOpacity onPress={()=>navigation.navigate('notification')}>
                      <Text style={{fontWeight:'bold',fontSize:12,textAlign:'center',marginTop:-5}}>VIEW NOTIFICATIONS</Text>
                  </TouchableOpacity>
             </View>

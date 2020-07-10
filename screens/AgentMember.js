@@ -75,7 +75,7 @@ const handleSubmit=(setLoading,name,email,Location,Tel,image,Address)=>{
 
 
 
-export default function MemberScreen({navigation}){
+export default function AgentMemberScreen({navigation}){
   const [image,setImage]=useState(null);
   const [Loading,setLoading]=useState(false)
   const [name,setName]=useState('')
@@ -89,7 +89,7 @@ export default function MemberScreen({navigation}){
     return(
         <View style={{flex:1,backgroundColor:"#c4ff4d"}}>
             <View style={{flexDirection:'row',borderBottomWidth:1,marginTop:29}}>
-                <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('Dash')} style={{marginTop:-9,marginBottom:8}}/>
+                <Feather name="arrow-left" size={29} onPress={()=>navigation.navigate('AgentDash')} style={{marginTop:-9,marginBottom:8}}/>
                 <Text style={{marginLeft:20,fontWeight:'bold',fontSize:20,marginTop:-6}}>ASADU ROYAL WASTE</Text>
             </View>
 

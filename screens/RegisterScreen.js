@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Text,View,StyleSheet,Image,ActivityIndicator,TextInput,Button,Switch,TouchableOpacity, Alert}  from 'react-native'
+import {Text,View,StyleSheet,Image,ActivityIndicator,TextInput,Button,Switch,TouchableOpacity, Alert,Platform}  from 'react-native'
 import {firebase} from '../firebase'
 
 
@@ -52,31 +52,28 @@ export default function RegisterScreen({navigation}){
     const [validation,setValidation]=useState('')
     const [Loading,setLoading]=useState(false)
 
-    
+    if(Platform.OS==='android'){
     return(
         <View style={{flex:1}}>
-            <View  style={{borderRadius:10,marginTop:130,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
-            <Image  source={require('../assets/images/1.jpg')} style={{borderRadius:40,height:80,width:80,marginTop:-50,marginLeft:130,borderColor:'green',borderWidth:1}}/>
+        <Image  source={require('../assets/images/1.jpg')} style={{height:150,width:'100%',marginTop:40}}/>
+            <View  style={{borderRadius:10,marginTop:-30,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
+         
                 <View style={{marginTop:54}}>
               
                <TextInput 
                placeholder="Username"
                value={email}
                onChangeText={email=>setEmail({email})}
-               style={{marginTop:10,marginBottom:20,backgroundColor:'white',height:40,width:"90%",marginBottom:-60,marginLeft:15,borderRadius:6}}
+               style={{marginTop:20,marginBottom:20,backgroundColor:'white',height:47,width:"90%",marginBottom:-60,marginLeft:15,borderRadius:6}}
                />
                <TextInput
                placeholder="Password"
                secureTextEntry={true}
-               style={{marginTop:100,backgroundColor:'white',height:40,marginBottom:-50,width:"90%",marginLeft:15,borderRadius:6}}
+               style={{marginTop:110,backgroundColor:'white',height:47,marginBottom:-50,width:"90%",marginLeft:15,borderRadius:6}}
                value={password}
                onChangeText={password=>setPassword({password})}
                />
-
-               <View  style={{backgroundColor:"red",marginTop:80,height:40,width:"90%",marginLeft:15,borderRadius:8}}>
-                   <Button  color="white"  title="Register"  type="submit" onPress={()=>handleSignUp(email,password,{navigation},setLoading)}/>
-               </View>
-                       
+                <Button  color="red"  title="Register"  style={{marginTop:100,height:45,width:"90%",marginLeft:15,borderRadius:8}} onPress={()=>handleSignUp(email,password,{navigation},setLoading)}/>
                {Loading &&
                 <View style={styles.activity}>
                     <ActivityIndicator size="large" color="#0000ff" />
@@ -86,10 +83,51 @@ export default function RegisterScreen({navigation}){
 
             </View>
             <TouchableOpacity onPress={()=>navigation.navigate('Client')}>
-                <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Go Back</Text>
+                <Text style={{marginLeft:140,marginTop:9,color:'red'}}>Go Back</Text>
             </TouchableOpacity>
         </View>
+
     )
+
+}
+return(
+    <View style={{flex:1}}>
+    <Image  source={require('../assets/images/1.jpg')} style={{height:150,width:'100%',marginTop:40}}/>
+        <View  style={{borderRadius:10,marginTop:-30,backgroundColor:'black',width:"95%",marginLeft:8,height:"62%"}}>
+     
+            <View style={{marginTop:54}}>
+          
+           <TextInput 
+           placeholder="Username"
+           value={email}
+           onChangeText={email=>setEmail({email})}
+           style={{marginTop:20,marginBottom:20,backgroundColor:'white',height:47,width:"90%",marginBottom:-60,marginLeft:15,borderRadius:6}}
+           />
+           <TextInput
+           placeholder="Password"
+           secureTextEntry={true}
+           style={{marginTop:110,backgroundColor:'white',height:47,marginBottom:-50,width:"90%",marginLeft:15,borderRadius:6}}
+           value={password}
+           onChangeText={password=>setPassword({password})}
+           />
+
+           <View  style={{backgroundColor:"red",marginTop:100,height:45,width:"90%",marginLeft:15,borderRadius:8}}>
+               <Button  color="white"  title="Register"  type="submit" onPress={()=>handleSignUp(email,password,{navigation},setLoading)}/>
+           </View>
+                   
+           {Loading &&
+            <View style={styles.activity}>
+                <ActivityIndicator size="large" color="#0000ff" />
+            </View>
+        }
+           </View>
+
+        </View>
+        <TouchableOpacity onPress={()=>navigation.navigate('Client')}>
+            <Text style={{marginLeft:140,marginTop:9,textDecorationLine: 'underline',color:'red'}}>Go Back</Text>
+        </TouchableOpacity>
+    </View>
+)
 }
 
 
@@ -98,7 +136,7 @@ const styles=StyleSheet.create({
         position: 'absolute',
         left: 0,
         right: 0,
-        top: 160,
+        top: 210,
         bottom: 0,
         alignItems: 'center',
         justifyContent: 'center'
