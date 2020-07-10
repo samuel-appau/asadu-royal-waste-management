@@ -1,4 +1,4 @@
-# asadu-royal-waste-management
+
 # asadu-royal-waste-management
 
 This repository contains codes for asadu-mobile application.
