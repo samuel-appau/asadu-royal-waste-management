@@ -13,12 +13,18 @@ Use the link below to run the application on your mobile phones with expo-client
 
 
 #Contributors to ths project
-Samuel Appau
-Louis Nusenu
-Kelvin Obeng Adarkwa
-Betrand Nyarko
-Andy Aladi
-Larry Ntori
-Alexander Kotei
+Samuel Appau------Developed Asadu Mobile application
+
+Louis Nusenu -----Tested the systeem after development
+
+Kelvin Obeng Adarkwa------Developed the entire database of the application
+
+Betrand Nyarko------Assisted in developing mobile application
+
+Andy Aladi-------Developed Web API
+
+Larry Ntori---------  Developed UI/UX Design of the application
+
+Alexander Kotei-------Assisted in developing the database of the application
 
 
