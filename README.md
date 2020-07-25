@@ -10,3 +10,15 @@ Use the link below to run the application on your mobile phones with expo-client
 -A web aplication has been built for asadu to be managed by the System Administrator at Asadu Royal Waste
  Use the link below to view the codes on github
 "https://github.com/AndyEnoch/Asadu-Waste-Management"
+
+
+#Contributors to ths project
+Samuel Appau
+Louis Nusenu
+Kelvin Obeng Adarkwa
+Betrand Nyarko
+Andy Aladi
+Larry Ntori
+Alexander Kotei
+
+
