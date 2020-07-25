@@ -13,6 +13,7 @@ Use the link below to run the application on your mobile phones with expo-client
 
 
 #Contributors to ths project
+
 Samuel Appau------Developed Asadu Mobile application
 
 Louis Nusenu -----Tested the systeem after development
